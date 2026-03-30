@@ -1,0 +1,11 @@
+# Ignore source files and config that shouldn't be served
+firebase/
+firebase-applet-config.json
+metadata.json
+tsconfig.json
+vite.config.ts
+.env.example
+README.md
+src/
+node_modules/
+.vercel/
