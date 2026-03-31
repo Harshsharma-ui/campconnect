@@ -196,28 +196,28 @@ const App: React.FC = () => {
         <div className="min-h-screen flex flex-col font-sans selection:bg-pink-100 selection:text-pink-900 bg-gradient-to-b from-white to-pink-50/30 dark:from-slate-950 dark:to-slate-900 dark:text-slate-100 transition-colors duration-300">
           {/* Navigation */}
           <nav className="sticky top-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-2xl border-b border-gray-100 dark:border-slate-800 shadow-sm">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
               <div className="flex justify-between h-20 items-center">
                 <div className="flex items-center gap-2 sm:gap-3 group cursor-pointer" onClick={() => window.location.href = '/'}>
                   <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 rounded-xl sm:rounded-2xl flex items-center justify-center text-white shadow-xl shadow-pink-200 dark:shadow-none group-hover:scale-110 transition-transform duration-300">
                     <GraduationCap size={20} className="sm:w-6 sm:h-6" />
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-lg sm:text-xl font-black text-gray-900 dark:text-white leading-none tracking-tighter">CampusConnect</span>
-                    <span className="text-[7px] sm:text-[8px] font-black text-pink-600 dark:text-pink-400 uppercase tracking-[0.3em] pl-0.5">College Portal</span>
+                    <span className="text-base sm:text-xl font-black text-gray-900 dark:text-white leading-none tracking-tighter">CampusConnect</span>
+                    <span className="hidden sm:block text-[7px] sm:text-[8px] font-black text-pink-600 dark:text-pink-400 uppercase tracking-[0.3em] pl-0.5">College Portal</span>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2 sm:gap-4">
                   <button
                     onClick={() => setDarkMode(!darkMode)}
-                    className="relative w-14 h-8 rounded-full bg-gray-100 dark:bg-slate-800 p-1 transition-colors duration-300 focus:outline-none border border-gray-200 dark:border-slate-700"
+                    className="relative w-12 h-7 sm:w-14 sm:h-8 rounded-full bg-gray-100 dark:bg-slate-800 p-1 transition-colors duration-300 focus:outline-none border border-gray-200 dark:border-slate-700"
                     aria-label="Toggle Dark Mode"
                   >
                     <motion.div
-                      animate={{ x: darkMode ? 24 : 0 }}
+                      animate={{ x: darkMode ? (window.innerWidth < 640 ? 20 : 24) : 0 }}
                       transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                      className="w-6 h-6 rounded-full bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center"
+                      className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center"
                     >
                       <AnimatePresence mode="wait" initial={false}>
                         <motion.div
@@ -227,7 +227,7 @@ const App: React.FC = () => {
                           exit={{ scale: 0, rotate: 90 }}
                           transition={{ duration: 0.15 }}
                         >
-                          {darkMode ? <Moon size={12} className="text-pink-500" /> : <Sun size={12} className="text-orange-500" />}
+                          {darkMode ? <Moon size={10} className="sm:w-3 sm:h-3 text-pink-500" /> : <Sun size={10} className="sm:w-3 sm:h-3 text-orange-500" />}
                         </motion.div>
                       </AnimatePresence>
                     </motion.div>
@@ -253,7 +253,7 @@ const App: React.FC = () => {
 
           {/* Footer */}
           <footer className="bg-white dark:bg-slate-950 border-t border-gray-100 dark:border-slate-800 py-10 relative z-10">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
               <div className="flex flex-col items-center gap-6">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 bg-gradient-to-br from-pink-500 to-orange-500 rounded-xl flex items-center justify-center text-white">

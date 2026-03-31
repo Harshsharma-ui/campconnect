@@ -109,16 +109,16 @@ export const StudentPanel: React.FC = () => {
   const regularNotices = filteredNotices.filter(n => !n.pinned);
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-10">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
       {/* Header & Search */}
       <div className="flex flex-col gap-8 mb-12">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <div className="w-14 h-14 bg-gradient-to-br from-pink-500 to-orange-500 rounded-2xl flex items-center justify-center text-white shadow-2xl shadow-pink-200 dark:shadow-none">
-              <LayoutGrid size={32} />
+          <div className="flex items-center gap-3 sm:gap-4">
+            <div className="w-10 h-10 sm:w-14 sm:h-14 bg-gradient-to-br from-pink-500 to-orange-500 rounded-xl sm:rounded-2xl flex items-center justify-center text-white shadow-2xl shadow-pink-200 dark:shadow-none">
+              <LayoutGrid size={24} className="sm:w-8 sm:h-8" />
             </div>
             <div>
-              <h1 className="text-3xl font-black text-gray-900 dark:text-white tracking-tighter leading-none mb-1">
+              <h1 className="text-xl sm:text-3xl font-black text-gray-900 dark:text-white tracking-tighter leading-none mb-1">
                 CampusConnect Board
               </h1>
               <p className="text-[10px] font-black text-pink-600 dark:text-pink-400 uppercase tracking-widest flex items-center gap-1.5">
@@ -158,7 +158,7 @@ export const StudentPanel: React.FC = () => {
       </div>
 
       {/* Categories Horizontal Scroll */}
-      <div className="mb-12 overflow-x-auto scrollbar-hide -mx-6 px-6">
+      <div className="mb-12 overflow-x-auto scrollbar-hide -mx-4 sm:-mx-6 px-4 sm:px-6">
         <div className="flex items-center gap-3 pb-4">
           <button
             onClick={() => setSelectedCategory('All')}

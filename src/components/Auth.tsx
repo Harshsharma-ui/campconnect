@@ -51,10 +51,11 @@ export const Auth: React.FC<AuthProps> = ({ isAdmin, onLogin, onLogout }) => {
       ) : (
         <button
           onClick={() => setIsModalOpen(true)}
-          className="flex items-center gap-1.5 sm:gap-2 px-3 py-2 sm:px-5 sm:py-2.5 bg-indigo-600 text-white rounded-lg sm:rounded-xl font-bold hover:bg-indigo-700 transition-all active:scale-95 shadow-lg shadow-indigo-200 dark:shadow-none text-xs sm:text-base"
+          className="flex items-center gap-1 sm:gap-2 px-2.5 py-1.5 sm:px-5 sm:py-2.5 bg-indigo-600 text-white rounded-lg sm:rounded-xl font-bold hover:bg-indigo-700 transition-all active:scale-95 shadow-lg shadow-indigo-200 dark:shadow-none text-xs sm:text-base"
         >
           <Shield size={16} className="sm:w-[18px] sm:h-[18px]" />
-          <span>Admin Login</span>
+          <span className="hidden sm:inline">Admin Login</span>
+          <span className="sm:hidden">Admin</span>
         </button>
       )}
 
