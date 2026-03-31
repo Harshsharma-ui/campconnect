@@ -39,4 +39,4 @@ CampusConnect is a modern, real-time digital notice board application designed f
 - **Performance**: Optimized rendering with Framer Motion's `AnimatePresence` for fluid entry and exit animations.
 
 ---
-
+*Built for the Hackathon - Revolutionizing Campus Communication.*
